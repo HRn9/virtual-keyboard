@@ -68,10 +68,10 @@ function generateKeys(keys, parentElement) {
 
 const rows = document.querySelectorAll('.keyboard-row');
 const keys = [
-  ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'],
+  ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'],
   ['Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del'],
   ['Caps Lock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter'],
-  ['Shift', 'z', 'x', 'v', 'b', 'n', 'm', ',', '.', '/', '▲', 'Shift'],
+  ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '▲', 'Shift'],
   ['Ctrl', 'Win', 'Alt', '', 'Alt', '◄', '▼', '►', 'Ctrl'],
 ];
 
@@ -79,3 +79,9 @@ keys.forEach((rowKeys, index) => {
   const row = rows[index];
   generateKeys(rowKeys, row);
 });
+
+const display = document.createElement('textarea');
+display.classList.add('keyboard-display');
+display.setAttribute('rows', '5');
+display.setAttribute('cols', '50');
+wrapper.appendChild(display);
