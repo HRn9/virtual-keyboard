@@ -46,6 +46,11 @@ body {
 }
 
 .active,
+.key:active {
+  background-color: #ebebeb;
+  border: 1px solid black;
+}
+
 .key:hover {
   background-color: #ebebeb;
 }

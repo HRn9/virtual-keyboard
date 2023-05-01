@@ -229,7 +229,6 @@ shifts.forEach((keyElement) => {
 
 document.addEventListener('keydown', ({ key }) => {
   const keyElement = document.querySelector(`.key[data-key="${key}"]`);
-  console.log(event)
   if (keyElement) {
     if (key === 'Backspace') {
       const cursorPosition = display.selectionStart;
